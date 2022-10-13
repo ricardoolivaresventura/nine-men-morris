@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
 public class WindowOneController {
@@ -22,7 +23,7 @@ public class WindowOneController {
 
         Scene scene = new Scene(root,912,649);
         Stage stage = new Stage();
-
+        stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/Logo.png")));
         stage.setScene(scene);
         stage.setTitle("Nime Men's Morris");
         stage.show();
