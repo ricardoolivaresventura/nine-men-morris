@@ -27,8 +27,9 @@ public class WindowOneController {
         stage.setScene(scene);
         stage.setTitle("Nime Men's Morris");
         stage.show();
+        stage.setResizable(false);
 
-        //close the window
+        //close this window
         Stage myStage = (Stage) this.buttonStart.getScene().getWindow();
         myStage.close();
 
