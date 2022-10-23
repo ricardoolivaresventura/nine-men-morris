@@ -3,6 +3,7 @@ package classes;
 public class PlayerFile {
     private char color;
     private int row, column;
+    private float positionUIX, positionUIY;
     public PlayerFile(char color, int row, int column) {
         this.color = color;
         this.row = row;
@@ -37,7 +38,23 @@ public class PlayerFile {
         this.column = column;
     }
 
-    public String getPositions (){
+    public String getPositionInMatrix (){
         return "Fila: "+ this.row + ", Columna: " + this.column;
+    }
+
+    public float getPositionUIX() {
+        return positionUIX;
+    }
+
+    public void setPositionUIX(float positionUIX) {
+        this.positionUIX = positionUIX;
+    }
+
+    public float getPositionUIY() {
+        return positionUIY;
+    }
+
+    public void setPositionUIY(float positionUIY) {
+        this.positionUIY = positionUIY;
     }
 }
