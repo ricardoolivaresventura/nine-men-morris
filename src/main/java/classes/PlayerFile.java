@@ -8,8 +8,9 @@ public class PlayerFile {
         this.row = row;
         this.column = column;
     }
-    public void showMessage(){
-        System.out.println("MOSTRAR MENSAJE");
+
+    public PlayerFile(char color){
+        this.color = color;
     }
 
     public char getColor() {
