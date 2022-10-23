@@ -6,21 +6,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
-public class WindowOneController {
+public class WelcomePageController {
     @FXML
     Button buttonStart;
 
-    //this method will open WindowTwo.fxml and then close WindowOne.fxml
     public void nextWindow(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("WindowTwo.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SelectFilePage.fxml"));
         Parent root = loader.load();
-
-        WindowTwoController controller = loader.getController();
-
+        SelectFilePageController controller = loader.getController();
         Scene scene = new Scene(root,912,649);
         Stage stage = new Stage();
         stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/Logo.png")));
@@ -28,11 +24,8 @@ public class WindowOneController {
         stage.setTitle("Nime Men's Morris");
         stage.show();
         stage.setResizable(false);
-
-        //close this window
         Stage myStage = (Stage) this.buttonStart.getScene().getWindow();
         myStage.close();
-
     }
 
 }

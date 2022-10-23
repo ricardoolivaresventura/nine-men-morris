@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ninemenmorris.SelectFilePageController">
+   <children>
+      <ImageView fitHeight="649.0" fitWidth="912.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/SelectFile.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="blackButton" contentDisplay="GRAPHIC_ONLY" layoutX="212.0" layoutY="250.0" mnemonicParsing="false" onAction="#selectBlackBtn" prefHeight="200.0" prefWidth="200.0" text="Button" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/blackCoin.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="redButton" contentDisplay="GRAPHIC_ONLY" layoutX="505.0" layoutY="250.0" mnemonicParsing="false" onAction="#selectRedBtn" prefHeight="200.0" prefWidth="200.0" text="Button">
+         <graphic>
+            <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/redIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</Pane>

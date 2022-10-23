@@ -1,21 +1,17 @@
 package com.example.ninemenmorris;
 
+import classes.Game;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class WindowTwoController implements Initializable {
+public class BoardPageController implements Initializable {
     @FXML
     Button btn1;
     @FXML
@@ -45,5 +41,6 @@ public class WindowTwoController implements Initializable {
                 setBtnStyle((Button) containerChildren.get(i));
             }
         }
+        // Game.showPlayers();
     }
 }
