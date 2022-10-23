@@ -13,13 +13,10 @@ public class WelcomePageController {
     @FXML
     Button buttonStart;
 
-    //this method will open BoardPage.fxml and then close WelcomePage.fxml
     public void nextWindow(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SelectFilePage.fxml"));
         Parent root = loader.load();
-
         SelectFilePageController controller = loader.getController();
-
         Scene scene = new Scene(root,912,649);
         Stage stage = new Stage();
         stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/Logo.png")));
@@ -27,8 +24,6 @@ public class WelcomePageController {
         stage.setTitle("Nime Men's Morris");
         stage.show();
         stage.setResizable(false);
-
-        //close this window
         Stage myStage = (Stage) this.buttonStart.getScene().getWindow();
         myStage.close();
     }

@@ -1,5 +1,7 @@
 package com.example.ninemenmorris;
 
+import classes.Game;
+import classes.GlobalConstants;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +22,6 @@ public class SelectFilePageController {
     public void navigateToNextWindow(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("BoardPage.fxml"));
         Parent root = loader.load();
-        BoardPageController controller = loader.getController();
         Scene scene = new Scene(root,912,649);
         Stage stage = new Stage();
         stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/Logo.png")));
@@ -28,17 +29,19 @@ public class SelectFilePageController {
         stage.setTitle("Nime Men's Morris");
         stage.show();
         stage.setResizable(false);
-        //close this window
         Stage myStage = (Stage) this.blackButton.getScene().getWindow();
         myStage.close();
     }
 
     public void selectBlackBtn(ActionEvent actionEvent) throws IOException {
-
+        Game.setPlayer1(GlobalConstants.BLACK);
+        Game.setPlayer2(GlobalConstants.RED);
         navigateToNextWindow(actionEvent);
     }
 
     public void selectRedBtn(ActionEvent actionEvent) throws IOException{
+        Game.setPlayer2(GlobalConstants.RED);
+        Game.setPlayer1(GlobalConstants.BLACK);
         navigateToNextWindow(actionEvent);
     }
 

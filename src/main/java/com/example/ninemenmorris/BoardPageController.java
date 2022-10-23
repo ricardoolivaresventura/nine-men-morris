@@ -1,5 +1,6 @@
 package com.example.ninemenmorris;
 
+import classes.Game;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -40,5 +41,6 @@ public class BoardPageController implements Initializable {
                 setBtnStyle((Button) containerChildren.get(i));
             }
         }
+        Game.showPlayers();
     }
 }
