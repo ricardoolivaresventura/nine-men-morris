@@ -41,6 +41,6 @@ public class BoardPageController implements Initializable {
                 setBtnStyle((Button) containerChildren.get(i));
             }
         }
-        Game.showPlayers();
+        // Game.showPlayers();
     }
 }

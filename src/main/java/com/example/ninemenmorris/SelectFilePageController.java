@@ -40,8 +40,8 @@ public class SelectFilePageController {
     }
 
     public void selectRedBtn(ActionEvent actionEvent) throws IOException{
-        Game.setPlayer2(GlobalConstants.RED);
-        Game.setPlayer1(GlobalConstants.BLACK);
+        Game.setPlayer1(GlobalConstants.RED);
+        Game.setPlayer2(GlobalConstants.BLACK);
         navigateToNextWindow(actionEvent);
     }
 

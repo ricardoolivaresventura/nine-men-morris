@@ -12,6 +12,14 @@ public class Game {
 
     }
 
+    public static Player getP1() {
+        return p1;
+    }
+
+    public static Player getP2() {
+        return p2;
+    }
+
     static public void setPlayer1(char color){
         Player player = new Player("Player 1","",color);
         p1 = player;
