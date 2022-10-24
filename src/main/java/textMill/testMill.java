@@ -6,13 +6,13 @@ public class testMill {
                 {'C','X','X','C','X','X','C'},
                 {'X','C','X','C','X','C','X'},
                 {'X','X','C','C','C','X','X'},
-                {'B','B','B','X','C','C','C'},
-                {'X','X','C','C','C','X','X'},
-                {'X','C','X','C','X','C','X'},
-                {'C','X','X','C','X','X','C'}
+                {'C','C','C','X','C','C','C'},
+                {'X','X','C','B','C','X','X'},
+                {'X','C','X','B','X','C','X'},
+                {'C','X','X','B','X','X','C'}
         };
-        int rows = 3;
-        int columns = 0;
+        int rows = 4;
+        int columns = 3;
 
         System.out.println(specialMill(board,rows,columns));
     }
@@ -46,10 +46,19 @@ public class testMill {
         return false;
     }
     static Boolean specialMill(char[][] board, int rows,int columns){
-        if(rows==3){
+        if(rows == 3){
             if(board[rows][0]=='B' && board[rows][1]=='B' && board[rows][2]=='B'){
                 return true;
             }else if(board[rows][4]=='B' && board[rows][5]=='B' && board[rows][6]=='B'){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        if(columns == 3){
+            if(board[0][columns]=='B' && board[1][columns]=='B' && board[2][columns]=='B'){
+                return true;
+            }else if(board[4][columns]=='B' && board[5][columns]=='B' && board[6][columns]=='B'){
                 return true;
             }else{
                 return false;
