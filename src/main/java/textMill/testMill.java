@@ -4,20 +4,23 @@ public class testMill {
     public static void main(String[] args) {
         char [][] board = {
                 {'C','X','X','C','X','X','C'},
-                {'X','B','X','C','X','C','X'},
+                {'X','C','X','C','X','C','X'},
                 {'X','X','C','C','C','X','X'},
-                {'C','B','C','X','C','C','C'},
-                {'X','X','C','C','C','X','X'},
-                {'X','B','X','C','X','C','X'},
-                {'C','X','X','C','X','X','C'}
+                {'C','C','C','X','C','C','C'},
+                {'X','X','C','B','C','X','X'},
+                {'X','C','X','B','X','C','X'},
+                {'C','X','X','B','X','X','C'}
         };
-        int rows = 3;
-        int columns = 1;
+        int rows = 6;
+        int columns = 3;
 
         System.out.println(mill(board,rows,columns));
     }
     static Boolean mill(char[][] board,int rows,int columns){
-
+        if(rows==3 || columns == 3){
+            return specialMill(board,  rows,  columns);
+        }
+        return horizontalMill(board,rows,columns);
     }
     static Boolean horizontalMill(char[][] board,int rows,int columns){
         int cont = 0;
