@@ -4,15 +4,15 @@ public class testMill {
     public static void main(String[] args) {
         char [][] board = {
                 {'C','X','X','C','X','X','C'},
-                {'X','C','X','C','X','C','X'},
+                {'X','B','X','C','X','C','X'},
                 {'X','X','C','C','C','X','X'},
-                {'C','C','C','X','C','C','C'},
-                {'X','X','C','B','C','X','X'},
-                {'X','C','X','B','X','C','X'},
-                {'C','X','X','B','X','X','C'}
+                {'C','B','C','X','C','C','C'},
+                {'X','X','C','C','C','X','X'},
+                {'X','B','X','C','X','C','X'},
+                {'C','X','X','C','X','X','C'}
         };
-        int rows = 4;
-        int columns = 3;
+        int rows = 3;
+        int columns = 1;
 
         System.out.println(specialMill(board,rows,columns));
     }
@@ -52,7 +52,7 @@ public class testMill {
             }else if(board[rows][4]=='B' && board[rows][5]=='B' && board[rows][6]=='B'){
                 return true;
             }else{
-                return false;
+                return verticalMill(board,  rows,  columns);
             }
         }
         if(columns == 3){
@@ -61,7 +61,7 @@ public class testMill {
             }else if(board[4][columns]=='B' && board[5][columns]=='B' && board[6][columns]=='B'){
                 return true;
             }else{
-                return false;
+                return horizontalMill(board,  rows,  columns);
             }
         }
         return false;
