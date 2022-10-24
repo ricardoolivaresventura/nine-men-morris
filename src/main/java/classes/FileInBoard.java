@@ -3,16 +3,16 @@ package classes;
 import java.util.Scanner;
 
 public class FileInBoard {
-    private Player player_;
+    private Game player_;
     private PlayerFile file_;
 
-    public FileInBoard(Player Fplayer_, PlayerFile Ffile_) {
+    public FileInBoard(Game Fplayer_, PlayerFile Ffile_) {
         this.player_ = Fplayer_;
         this.file_ = Ffile_;
 
     }
 
-
+    /*
     public void makeMove(int row, int column) {
         if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
             if (file_.getColor() == GlobalConstants.BLACK) {
@@ -23,13 +23,14 @@ public class FileInBoard {
 
         }
     }
+    */
 
     public void Play() {
         boolean done = false;
         int row, column;
         Scanner in = new Scanner(System.in);
         System.out.println("Bienvenido al juego Nine Men´s Morris!");
-        System.out.println("Actual jugador: " + player_.getFileColor());
+        System.out.println("Actual jugador: " + player_.));
         System.out.print("Mueve en la fila: ");
         row = in.nextInt();
         System.out.print("Mueve en la columna: ");
@@ -40,7 +41,7 @@ public class FileInBoard {
         if (file_.getRow() < 0 || file_.getRow() > GlobalConstants.ROWS || file_.getColumn() < 0 || file_.getColumn() > GlobalConstants.COLUMN)
             System.out.println("Movimiento invalido en (" + file_.getRow() + "," + file_.getColumn() + ")");
         else {
-            makeMove(row, column);
+            //makeMove(row, column);
         }
     }
 }

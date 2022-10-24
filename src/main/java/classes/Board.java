@@ -21,6 +21,16 @@ public class Board {
             System.out.println('\n');
         }
     }
+    public void makeMove(int row, int column) {
+        if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
+            if ( Game.currentTurn== GlobalConstants.BLACK) {
+                Game.currentTurn=GlobalConstants.RED;
+            } else {
+                Game.currentTurn= GlobalConstants.BLACK;
+            }
+
+        }
+    }
 
     public static void main(String[] args) {
         Board b = new Board();
