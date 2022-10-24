@@ -54,16 +54,19 @@ public class BoardPageController implements Initializable {
         btn.setStyle(buttonStyle);
     }
 
-    public void testButonClick(Button btn){
+    public void testButtonClick(Button btn){
         btn.setOnAction(actionEvent -> {
             if(Game.currentTurn == GlobalConstants.BLACK){
-                Game.currentTurn = GlobalConstants.RED;
                 btn.setStyle(blackStyle);
             }
             else{
-                Game.currentTurn = GlobalConstants.BLACK;
                 btn.setStyle(redStyle);
             }
+            String btnText = btn.getId();
+            String rowAndColumn = btnText.substring(3, 5);
+            int btnRow = Character.getNumericValue(rowAndColumn.charAt(0));
+            int btnColumn = Character.getNumericValue(rowAndColumn.charAt(1));
+            Game.board.setFileInPosition(btnRow, btnColumn);
         });
     }
 
@@ -74,7 +77,7 @@ public class BoardPageController implements Initializable {
             if(containerChildren.get(i) instanceof Button){
                 ((Button) containerChildren.get(i)).setText("");
                 setBtnStyle((Button) containerChildren.get(i));
-                testButonClick((Button)containerChildren.get(i));
+                testButtonClick((Button)containerChildren.get(i));
             }
         }
         // Game.showPlayers();

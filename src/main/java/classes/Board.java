@@ -33,6 +33,19 @@ public class Board {
         }
     }
 
+    public void setFileInPosition(int row, int column){
+        if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
+            files[row][column].setColor(Game.currentTurn);
+            if ( Game.currentTurn== GlobalConstants.BLACK) {
+                Game.currentTurn=GlobalConstants.RED;
+            } else {
+                Game.currentTurn = GlobalConstants.BLACK;
+            }
+        }else{
+            System.out.println("Movimiento invalido en (" + row + "," + column + ")");
+        }
+    }
+
     public static void main(String[] args) {
         Board b = new Board();
         b.displayBoard();
