@@ -14,11 +14,11 @@ public class testMill {
         int rows = 3;
         int columns = 1;
 
-        System.out.println(specialMill(board,rows,columns));
+        System.out.println(mill(board,rows,columns));
     }
-    /*static Boolean mill(char[][] board,int rows,int columns){
+    static Boolean mill(char[][] board,int rows,int columns){
 
-    }*/
+    }
     static Boolean horizontalMill(char[][] board,int rows,int columns){
         int cont = 0;
         //search in rows
@@ -28,7 +28,7 @@ public class testMill {
             }
         }
         if(cont==3){
-            return true;
+            return verticalMill(board,rows,columns);
         }
         return false;
     }
