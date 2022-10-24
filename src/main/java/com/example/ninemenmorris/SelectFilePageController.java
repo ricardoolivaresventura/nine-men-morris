@@ -36,12 +36,14 @@ public class SelectFilePageController {
     public void selectBlackBtn(ActionEvent actionEvent) throws IOException {
         Game.setPlayer1(GlobalConstants.BLACK);
         Game.setPlayer2(GlobalConstants.RED);
+        Game.currentTurn = GlobalConstants.BLACK;
         navigateToNextWindow(actionEvent);
     }
 
     public void selectRedBtn(ActionEvent actionEvent) throws IOException{
         Game.setPlayer1(GlobalConstants.RED);
         Game.setPlayer2(GlobalConstants.BLACK);
+        Game.currentTurn = GlobalConstants.RED;
         navigateToNextWindow(actionEvent);
     }
 

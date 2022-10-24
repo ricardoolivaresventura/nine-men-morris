@@ -4,36 +4,36 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="912.0" scaleShape="false" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ninemenmorris.BoardPageController">
+<Pane fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="912.0" scaleShape="false" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ninemenmorris.BoardPageController">
    <children>
-      <ImageView fitHeight="649.0" fitWidth="912.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="649.0" fitWidth="912.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/Board.png" />
          </image>
       </ImageView>
-      <Button fx:id="btn1" layoutX="193.0" layoutY="109.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn10" layoutX="192.0" layoutY="349.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn22" layoutX="195.0" layoutY="592.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn23" layoutX="440.0" layoutY="592.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn24" layoutX="680.0" layoutY="594.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn20" layoutX="438.0" layoutY="513.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn19" layoutX="277.0" layoutY="511.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn11" layoutX="270.0" layoutY="349.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn4" layoutX="273.0" layoutY="189.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn5" layoutX="436.0" layoutY="189.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn6" layoutX="598.0" layoutY="189.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn14" layoutX="601.0" layoutY="348.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn21" layoutX="598.0" layoutY="511.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn17" layoutX="435.0" layoutY="430.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn16" layoutX="355.0" layoutY="428.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn12" layoutX="353.0" layoutY="350.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn7" layoutX="356.0" layoutY="269.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn8" layoutX="441.0" layoutY="270.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn9" layoutX="515.0" layoutY="272.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn13" layoutX="518.0" layoutY="350.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn18" layoutX="520.0" layoutY="430.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn2" layoutX="435.0" layoutY="108.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn3" layoutX="680.0" layoutY="107.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="btn15" layoutX="681.0" layoutY="348.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn00" layoutX="193.0" layoutY="109.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn30" layoutX="192.0" layoutY="349.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn60" layoutX="195.0" layoutY="592.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn63" layoutX="440.0" layoutY="592.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn66" layoutX="680.0" layoutY="594.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn53" layoutX="438.0" layoutY="513.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn51" layoutX="277.0" layoutY="511.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn31" layoutX="270.0" layoutY="349.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn11" layoutX="273.0" layoutY="189.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn13" layoutX="436.0" layoutY="189.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn15" layoutX="598.0" layoutY="189.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn35" layoutX="601.0" layoutY="348.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn55" layoutX="598.0" layoutY="511.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn43" layoutX="435.0" layoutY="430.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn42" layoutX="355.0" layoutY="428.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn32" layoutX="353.0" layoutY="350.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn22" layoutX="356.0" layoutY="269.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn23" layoutX="441.0" layoutY="270.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn24" layoutX="515.0" layoutY="272.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn34" layoutX="518.0" layoutY="350.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn44" layoutX="520.0" layoutY="430.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn03" layoutX="435.0" layoutY="108.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn06" layoutX="680.0" layoutY="107.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn36" layoutX="681.0" layoutY="348.0" mnemonicParsing="false" text="Button" />
    </children>
 </Pane>
