@@ -31,9 +31,9 @@ public class testMill {
             }
         }
         if(cont==3){
-            return verticalMill(board,rows,columns);
+            return true;
         }
-        return false;
+        return verticalMill(board,rows,columns);
     }
     static Boolean verticalMill(char[][] board, int rows,int columns){
         int cont = 0;
