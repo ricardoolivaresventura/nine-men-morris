@@ -1,2 +1,4 @@
-package textMill;public class testMill {
+package textMill;
+
+public class testMill {
 }
