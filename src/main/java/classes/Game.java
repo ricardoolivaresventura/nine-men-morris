@@ -4,6 +4,7 @@ public class Game {
     static public char gameMode;
     static public char currentTurn;
     static public Player p1, p2;
+    static public Board board = new Board();
     public Game(){
 
     }
@@ -34,6 +35,10 @@ public class Game {
     static public void showPlayers(){
         System.out.println("PLAYER 1: " + p1.getName() + p1.getFileColor());
         System.out.println("PLAYER 2: " + p2.getName() + p2.getFileColor());
+    }
+
+    static public Board getBoard(){
+        return board;
     }
 
 }

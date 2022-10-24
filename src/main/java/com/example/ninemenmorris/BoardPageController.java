@@ -1,6 +1,7 @@
 package com.example.ninemenmorris;
 
 import classes.Game;
+import classes.GlobalConstants;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -31,13 +32,38 @@ public class BoardPageController implements Initializable {
             "-fx-background-insets: 0px; " +
             "-fx-padding: 0px;";
 
+    String blackStyle = "-fx-background-radius: 5em; " +
+            "-fx-min-width: 30px; " +
+            "-fx-min-height: 30px; " +
+            "-fx-max-width: 30px; " +
+            "-fx-max-height: 30px; " +
+            "-fx-background-color: black;" +
+            "-fx-background-insets: 0px; " +
+            "-fx-padding: 0px;";
+
+    String redStyle = "-fx-background-radius: 5em; " +
+            "-fx-min-width: 30px; " +
+            "-fx-min-height: 30px; " +
+            "-fx-max-width: 30px; " +
+            "-fx-max-height: 30px; " +
+            "-fx-background-color: red;" +
+            "-fx-background-insets: 0px; " +
+            "-fx-padding: 0px;";
+
     public void setBtnStyle(Button btn){
         btn.setStyle(buttonStyle);
     }
 
     public void testButonClick(Button btn){
         btn.setOnAction(actionEvent -> {
-            System.out.println(btn.getId());
+            if(Game.currentTurn == GlobalConstants.BLACK){
+                Game.currentTurn = GlobalConstants.RED;
+                btn.setStyle(blackStyle);
+            }
+            else{
+                Game.currentTurn = GlobalConstants.BLACK;
+                btn.setStyle(redStyle);
+            }
         });
     }
 
@@ -46,6 +72,7 @@ public class BoardPageController implements Initializable {
         containerChildren = mainContainer.getChildren();
         for(int i = 0; i < containerChildren.size(); i++){
             if(containerChildren.get(i) instanceof Button){
+                ((Button) containerChildren.get(i)).setText("");
                 setBtnStyle((Button) containerChildren.get(i));
                 testButonClick((Button)containerChildren.get(i));
             }
