@@ -4,15 +4,14 @@ public class PlayerFile {
     private char color;
     private int row, column;
 
-    private String nameFile;
+    private String fileName;
     public static PlayerFile fil_null(){
         PlayerFile f = new PlayerFile();
         f.setColumn(10);
         f.setRow(10);
         f.setColor('N');
-        f.setNameFile("Null");
+        f.setFileName("Null");
         return f;
-
     }
 
     public char getColor() {
@@ -38,11 +37,11 @@ public class PlayerFile {
     public void setColumn(int column) {
         this.column = column;
     }
-    public String getNameFile() {
-        return nameFile;
+    public String getFileName() {
+        return fileName;
     }
-    public void setNameFile(String nameFile) {
-        this.nameFile = nameFile;
+    public void setFileName(String nameFile) {
+        this.fileName = nameFile;
     }
 
 

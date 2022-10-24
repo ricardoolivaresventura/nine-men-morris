@@ -13,10 +13,9 @@ public class Board {
     }
 
     public void displayBoard() {
-
         for (int i = 0; i < GlobalConstants.ROWS; i++) {
             for (int j = 0; j < GlobalConstants.COLUMN; j++) {
-                System.out.print(files[i][j].getNameFile() + "\t");
+                System.out.print(files[i][j].getFileName() + "\t");
             }
             System.out.println('\n');
         }
@@ -29,6 +28,8 @@ public class Board {
                 Game.currentTurn= GlobalConstants.BLACK;
             }
 
+        }else{
+                System.out.println("Movimiento invalido en (" + row + "," + column + ")");
         }
     }
 

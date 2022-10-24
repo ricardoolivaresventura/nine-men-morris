@@ -1,6 +1,8 @@
 package com.example.ninemenmorris;
 
 import classes.Game;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -25,12 +27,18 @@ public class BoardPageController implements Initializable {
             "-fx-min-height: 30px; " +
             "-fx-max-width: 30px; " +
             "-fx-max-height: 30px; " +
-            "-fx-background-color: black;" +
+            "-fx-background-color: white;" +
             "-fx-background-insets: 0px; " +
             "-fx-padding: 0px;";
 
     public void setBtnStyle(Button btn){
         btn.setStyle(buttonStyle);
+    }
+
+    public void testButonClick(Button btn){
+        btn.setOnAction(actionEvent -> {
+            System.out.println(btn.getId());
+        });
     }
 
     @Override
@@ -39,8 +47,10 @@ public class BoardPageController implements Initializable {
         for(int i = 0; i < containerChildren.size(); i++){
             if(containerChildren.get(i) instanceof Button){
                 setBtnStyle((Button) containerChildren.get(i));
+                testButonClick((Button)containerChildren.get(i));
             }
         }
         // Game.showPlayers();
     }
+
 }

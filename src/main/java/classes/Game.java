@@ -9,7 +9,8 @@ public class Game {
     }
 
     public void initializeGame(){
-
+        System.out.println("Bienvenido al juego Nine Men´s Morris!");
+        System.out.println("Actual jugador: " + Game.currentTurn);
     }
 
     public static Player getP1() {
