@@ -16,11 +16,8 @@ import java.util.ResourceBundle;
 
 public class BoardPageController implements Initializable {
     @FXML
-    Button btn1;
-    @FXML
     Pane mainContainer;
 
-    List<Button> buttonList = new ArrayList();
     List containerChildren = new ArrayList();
 
     String buttonStyle = "-fx-background-radius: 5em; " +

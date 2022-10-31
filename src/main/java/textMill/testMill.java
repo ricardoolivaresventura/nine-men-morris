@@ -7,11 +7,11 @@ public class testMill {
                 {'X','C','X','C','X','C','X'},
                 {'X','X','C','C','C','X','X'},
                 {'C','C','C','X','C','C','C'},
-                {'X','X','C','B','C','X','X'},
+                {'X','X','B','B','B','X','X'},
                 {'X','C','X','B','X','C','X'},
                 {'C','X','X','B','X','X','C'}
         };
-        int rows = 6;
+        int rows = 4;
         int columns = 3;
 
         System.out.println(mill(board,rows,columns));
