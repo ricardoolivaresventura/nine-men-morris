@@ -22,7 +22,7 @@ public class Mill {
         int cont = 0;
         //search in rows
         for(int i=0;i<7;i++){
-            if(board[rows][i]=='B'){
+            if(board[rows][i].getColor()=='B'){
                 cont++;
             }
         }
@@ -36,7 +36,7 @@ public class Mill {
         int cont = 0;
         //search in columns
         for(int i=0;i<7;i++){
-            if(board[i][columns]=='B'){
+            if(board[i][columns].getColor()=='B'){
                 cont++;
             }
         }
@@ -47,18 +47,18 @@ public class Mill {
     }
     Boolean specialMill(PlayerFile[][] board, int rows,int columns){
         if(rows == 3){
-            if(board[rows][0]=='B' && board[rows][1]=='B' && board[rows][2]=='B'){
+            if(board[rows][0].getColor()=='B' && board[rows][1].getColor()=='B' && board[rows][2].getColor()=='B'){
                 return true;
-            }else if(board[rows][4]=='B' && board[rows][5]=='B' && board[rows][6]=='B'){
+            }else if(board[rows][4].getColor()=='B' && board[rows][5].getColor()=='B' && board[rows][6].getColor()=='B'){
                 return true;
             }else{
                 return verticalMill(board,  rows,  columns);
             }
         }
         if(columns == 3){
-            if(board[0][columns]=='B' && board[1][columns]=='B' && board[2][columns]=='B'){
+            if(board[0][columns].getColor()=='B' && board[1][columns].getColor()=='B' && board[2][columns].getColor()=='B'){
                 return true;
-            }else if(board[4][columns]=='B' && board[5][columns]=='B' && board[6][columns]=='B'){
+            }else if(board[4][columns].getColor()=='B' && board[5][columns].getColor()=='B' && board[6][columns].getColor()=='B'){
                 return true;
             }else{
                 return horizontalMill(board,  rows,  columns);
