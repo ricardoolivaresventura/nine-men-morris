@@ -36,6 +36,7 @@ public class Board {
     public void setFileInPosition(int row, int column){
         if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
             files[row][column].setColor(Game.currentTurn);
+
             if ( Game.currentTurn== GlobalConstants.BLACK) {
                 Game.currentTurn=GlobalConstants.RED;
             } else {
@@ -44,13 +45,6 @@ public class Board {
         }else{
             System.out.println("Movimiento invalido en (" + row + "," + column + ")");
         }
-        for(int i = 0;i<7;i++){
-            for(int j=0;j<7;j++){
-                System.out.print(files[i][j].getColor() +"  ");
-            }
-            System.out.println();
-        }
-        System.out.println();
     }
 
 }
