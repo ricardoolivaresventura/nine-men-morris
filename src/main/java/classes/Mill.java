@@ -1,24 +1,15 @@
 package classes;
 
 public class Mill {
-    private PlayerFile[][] files;
-    private int row;
-    private int column;
 
-    public Mill(PlayerFile[][] files, int row, int column){
-        this.files = files;
-        this.row = row;
-        this.column = column;
-    }
-
-    Boolean mill(PlayerFile[][] board,int rows,int columns){
+    public static Boolean mill(PlayerFile[][] board,int rows,int columns){
         if(rows==3 || columns == 3){
             return specialMill(board,  rows,  columns);
         }
         return horizontalMill(board,rows,columns);
     }
 
-    Boolean horizontalMill(PlayerFile[][] board,int rows,int columns){
+    public static Boolean horizontalMill(PlayerFile[][] board,int rows,int columns){
         int cont = 0;
         //search in rows
         for(int i=0;i<7;i++){
@@ -32,7 +23,7 @@ public class Mill {
         return verticalMill(board,rows,columns);
     }
 
-    Boolean verticalMill(PlayerFile[][] board, int rows,int columns){
+    public static Boolean verticalMill(PlayerFile[][] board, int rows,int columns){
         int cont = 0;
         //search in columns
         for(int i=0;i<7;i++){
@@ -45,7 +36,7 @@ public class Mill {
         }
         return false;
     }
-    Boolean specialMill(PlayerFile[][] board, int rows,int columns){
+    public static Boolean specialMill(PlayerFile[][] board, int rows,int columns){
         if(rows == 3){
             if(board[rows][0].getColor()=='B' && board[rows][1].getColor()=='B' && board[rows][2].getColor()=='B'){
                 return true;

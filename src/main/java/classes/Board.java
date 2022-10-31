@@ -36,7 +36,7 @@ public class Board {
     public void setFileInPosition(int row, int column){
         if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
             files[row][column].setColor(Game.currentTurn);
-
+            Mill checkMill = new Mill();
             if ( Game.currentTurn== GlobalConstants.BLACK) {
                 Game.currentTurn=GlobalConstants.RED;
             } else {
