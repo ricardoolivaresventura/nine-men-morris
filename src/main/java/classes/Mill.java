@@ -11,14 +11,14 @@ public class Mill {
         this.column = column;
     }
 
-    Boolean mill(char[][] board,int rows,int columns){
+    Boolean mill(PlayerFile[][] board,int rows,int columns){
         if(rows==3 || columns == 3){
             return specialMill(board,  rows,  columns);
         }
         return horizontalMill(board,rows,columns);
     }
 
-    Boolean horizontalMill(char[][] board,int rows,int columns){
+    Boolean horizontalMill(PlayerFile[][] board,int rows,int columns){
         int cont = 0;
         //search in rows
         for(int i=0;i<7;i++){
@@ -32,7 +32,7 @@ public class Mill {
         return verticalMill(board,rows,columns);
     }
 
-    Boolean verticalMill(char[][] board, int rows,int columns){
+    Boolean verticalMill(PlayerFile[][] board, int rows,int columns){
         int cont = 0;
         //search in columns
         for(int i=0;i<7;i++){
@@ -45,7 +45,7 @@ public class Mill {
         }
         return false;
     }
-    Boolean specialMill(char[][] board, int rows,int columns){
+    Boolean specialMill(PlayerFile[][] board, int rows,int columns){
         if(rows == 3){
             if(board[rows][0]=='B' && board[rows][1]=='B' && board[rows][2]=='B'){
                 return true;
