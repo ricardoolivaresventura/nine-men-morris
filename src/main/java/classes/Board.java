@@ -34,20 +34,19 @@ public class Board {
     }
 
     public void setFileInPosition(int row, int column){
+        Boolean checkMill=false;
         if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
             files[row][column].setColor(Game.currentTurn);
+            checkMill = Mill.mill(files,row,column);
             if ( Game.currentTurn== GlobalConstants.BLACK) {
                 Game.currentTurn=GlobalConstants.RED;
-            } else {
+            } else if(Game.currentTurn== GlobalConstants.RED){
                 Game.currentTurn = GlobalConstants.BLACK;
             }
-        }else{
-            System.out.println("Movimiento invalido en (" + row + "," + column + ")");
+        }
+        if(checkMill){
+            System.out.println("Molino");
         }
     }
 
-    public static void main(String[] args) {
-        Board b = new Board();
-        b.displayBoard();
-    }
 }
