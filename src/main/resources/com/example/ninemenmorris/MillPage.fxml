@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
@@ -10,5 +11,6 @@
             <Image url="@../../../images/Scenery.png" />
          </image>
       </ImageView>
+      <Label layoutX="72.0" layoutY="83.0" prefHeight="63.0" prefWidth="132.0" text="Label" />
    </children>
 </Pane>
