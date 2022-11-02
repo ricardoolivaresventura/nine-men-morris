@@ -53,17 +53,23 @@ public class BoardPageController implements Initializable {
 
     public void testButtonClick(Button btn){
         btn.setOnAction(actionEvent -> {
-            if(Game.currentTurn == GlobalConstants.BLACK){
-                btn.setStyle(blackStyle);
+            if(Game.placedFilesQuantity < GlobalConstants.MAX_FILES_QUANTITY) {
+                String btnText = btn.getId();
+                String rowAndColumn = btnText.substring(3, 5);
+                int btnRow = Character.getNumericValue(rowAndColumn.charAt(0));
+                int btnColumn = Character.getNumericValue(rowAndColumn.charAt(1));
+                char currentBtnColor = Game.board.getFileInPosition(btnRow, btnColumn).getColor();
+
+                if(currentBtnColor != GlobalConstants.BLACK && currentBtnColor != GlobalConstants.RED){
+                    Game.board.setFileInPosition(btnRow, btnColumn);
+                    if(Game.currentTurn == GlobalConstants.BLACK){
+                        btn.setStyle(blackStyle);
+                    }
+                    else {
+                        btn.setStyle(redStyle);
+                    }
+                }
             }
-            else{
-                btn.setStyle(redStyle);
-            }
-            String btnText = btn.getId();
-            String rowAndColumn = btnText.substring(3, 5);
-            int btnRow = Character.getNumericValue(rowAndColumn.charAt(0));
-            int btnColumn = Character.getNumericValue(rowAndColumn.charAt(1));
-            Game.board.setFileInPosition(btnRow, btnColumn);
         });
     }
 
