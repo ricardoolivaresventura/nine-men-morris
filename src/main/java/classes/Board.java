@@ -12,6 +12,13 @@ public class Board {
         }
     }
 
+    public PlayerFile getFileInPosition(int row, int column){
+        if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
+            return this.files[row][column];
+        }
+        return null;
+    }
+
     public void displayBoard() {
         for (int i = 0; i < GlobalConstants.ROWS; i++) {
             for (int j = 0; j < GlobalConstants.COLUMN; j++) {
@@ -43,6 +50,7 @@ public class Board {
             } else if(Game.currentTurn== GlobalConstants.RED){
                 Game.currentTurn = GlobalConstants.BLACK;
             }
+            Game.placedFilesQuantity = Game.placedFilesQuantity + 1;
         }
         if(checkMill){
             System.out.println("Molino");

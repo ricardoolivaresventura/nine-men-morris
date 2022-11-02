@@ -5,6 +5,7 @@ public class Game {
     static public char currentTurn;
     static public Player p1, p2;
     static public Board board = new Board();
+    static public int placedFilesQuantity = 0;
     public Game(){
 
     }
