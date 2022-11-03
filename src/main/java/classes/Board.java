@@ -40,21 +40,21 @@ public class Board {
         }
     }
 
-    public void setFileInPosition(int row, int column){
-        Boolean checkMill=false;
+    public PlayerFile[][] getFiles(){
+        return this.files;
+    }
+
+    public Boolean setFileInPosition(int row, int column){
+        //Boolean checkMill=false;
         if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
             files[row][column].setColor(Game.currentTurn);
-            checkMill = Mill.mill(files,row,column);
-            if ( Game.currentTurn== GlobalConstants.BLACK) {
-                Game.currentTurn=GlobalConstants.RED;
-            } else if(Game.currentTurn== GlobalConstants.RED){
-                Game.currentTurn = GlobalConstants.BLACK;
-            }
-            Game.placedFilesQuantity = Game.placedFilesQuantity + 1;
+            //checkMill = Mill.mill(files,row,column);
+            return true;
         }
-        if(checkMill){
-            System.out.println("Molino");
-        }
+        return false;
+        /*if(checkMill){
+
+        }*/
     }
 
 }
