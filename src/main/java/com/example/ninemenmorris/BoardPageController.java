@@ -61,13 +61,13 @@ public class BoardPageController implements Initializable {
                 char currentBtnColor = Game.board.getFileInPosition(btnRow, btnColumn).getColor();
 
                 if(currentBtnColor != GlobalConstants.BLACK && currentBtnColor != GlobalConstants.RED){
-                    Game.board.setFileInPosition(btnRow, btnColumn);
                     if(Game.currentTurn == GlobalConstants.BLACK){
                         btn.setStyle(blackStyle);
                     }
                     else {
                         btn.setStyle(redStyle);
                     }
+                    Game.board.setFileInPosition(btnRow, btnColumn);
                 }
             }
         });
