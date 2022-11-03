@@ -1,5 +1,7 @@
 package classes;
 
+import com.example.ninemenmorris.MillPageController;
+
 public class Board {
     private PlayerFile[][] files;
 
@@ -53,7 +55,9 @@ public class Board {
             Game.placedFilesQuantity = Game.placedFilesQuantity + 1;
         }
         if(checkMill){
-            System.out.println("Molino");
+            MillPageController mill = new MillPageController();
+            mill.toCall();
+
         }
     }
 
