@@ -2,6 +2,7 @@ package classes;
 
 public class PlayerFile {
     private char color;
+    private Boolean highlight = false;
     private int row, column;
 
     private String fileName;
@@ -44,5 +45,11 @@ public class PlayerFile {
         this.fileName = nameFile;
     }
 
+    public Boolean getHighlight() {
+        return highlight;
+    }
 
+    public void setHighlight(Boolean highlight) {
+        this.highlight = highlight;
+    }
 }

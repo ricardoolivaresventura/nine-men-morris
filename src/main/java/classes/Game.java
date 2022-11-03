@@ -6,6 +6,8 @@ public class Game {
     static public Player p1, p2;
     static public Board board = new Board();
     static public int placedFilesQuantity = 0;
+
+    static public Boolean thereIsAMill = false;
     public Game(){
 
     }

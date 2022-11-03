@@ -2,11 +2,14 @@ package classes;
 
 public class Mill {
 
-    public static Boolean mill(PlayerFile[][] board,int rows,int columns){
-        if(rows==3 || columns == 3){
-            return specialMill(board,  rows,  columns);
+    public static Boolean mill(PlayerFile[][] board,int row,int column){
+        if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
+            if(row==3 || column == 3){
+                return specialMill(board,  row,  column);
+            }
+            return horizontalMill(board,row,column);
         }
-        return horizontalMill(board,rows,columns);
+        return false;
     }
 
     public static Boolean horizontalMill(PlayerFile[][] board,int rows,int columns){
