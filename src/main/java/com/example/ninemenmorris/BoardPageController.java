@@ -48,23 +48,36 @@ public class BoardPageController implements Initializable {
             "-fx-background-insets: 0px; " +
             "-fx-padding: 0px;";
 
-    String hightlightStyle = "-fx-background-radius: 5em; " +
+    String blackHightlightStyle = "-fx-background-radius: 5em; " +
             "-fx-min-width: 30px; " +
             "-fx-min-height: 30px; " +
             "-fx-max-width: 30px; " +
             "-fx-max-height: 30px; " +
-            "-fx-background-color: green;" +
+            "-fx-background-color: black;" +
             "-fx-background-insets: 0px; " +
-            "-fx-border-width: 1px;" +
+            "-fx-border-width: 4px;" +
             "-fx-border-radius: 5em;" +
-            "-fx-border-color: white;" +
+            "-fx-border-color: #0BAB02;" +
             "-fx-padding: 0px;";
+
+    String redHightlightStyle = "-fx-background-radius: 5em; " +
+            "-fx-min-width: 30px; " +
+            "-fx-min-height: 30px; " +
+            "-fx-max-width: 30px; " +
+            "-fx-max-height: 30px; " +
+            "-fx-background-color: red;" +
+            "-fx-background-insets: 0px; " +
+            "-fx-border-width: 4px;" +
+            "-fx-border-radius: 5em;" +
+            "-fx-border-color: #0BAB02;" +
+            "-fx-padding: 0px;";
+
 
     public void setBtnStyle(Button btn){
         btn.setStyle(buttonStyle);
     }
 
-    public void highlightButtonsToRemove(int row, int column){
+    public void highlightButtonsToRemove(int row, int column, char color){
         containerChildren = mainContainer.getChildren();
         for(int i = 0; i < containerChildren.size(); i++){
             if(containerChildren.get(i) instanceof Button){
@@ -73,7 +86,12 @@ public class BoardPageController implements Initializable {
                 int btnRow = Character.getNumericValue(rowAndColumn.charAt(0));
                 int btnColumn = Character.getNumericValue(rowAndColumn.charAt(1));
                 if(btnRow == row && btnColumn == column){
-                    ((Button) containerChildren.get(i)).setStyle(hightlightStyle);
+                    if(color == GlobalConstants.BLACK){
+                        ((Button) containerChildren.get(i)).setStyle(blackHightlightStyle);
+                    }
+                    else{
+                        ((Button) containerChildren.get(i)).setStyle(redHightlightStyle);
+                    }
                 }
             }
         }
@@ -86,7 +104,7 @@ public class BoardPageController implements Initializable {
                 currentBtnColor = Game.board.getFileInPosition(i, j).getColor();
                 if(currentBtnColor == color){
                     // Game.board.getFileInPosition(i,j).setHighlight(true);
-                    highlightButtonsToRemove(i, j);
+                    highlightButtonsToRemove(i, j, color);
                 }
             }
         }
