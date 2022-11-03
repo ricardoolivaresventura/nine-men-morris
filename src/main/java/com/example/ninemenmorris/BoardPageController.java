@@ -120,7 +120,7 @@ public class BoardPageController implements Initializable {
 
     public void testButtonClick(Button btn){
         btn.setOnAction(actionEvent -> {
-            if(Game.placedFilesQuantity < GlobalConstants.MAX_FILES_QUANTITY) {
+            if(Game.placedFilesQuantity < GlobalConstants.MAX_FILES_QUANTITY && !Game.thereIsAMill) {
                 Boolean checkMill=false;
                 String btnText = btn.getId();
                 String rowAndColumn = btnText.substring(3, 5);
@@ -139,7 +139,7 @@ public class BoardPageController implements Initializable {
                         Game.placedFilesQuantity = Game.placedFilesQuantity + 1;
                         checkMill = Mill.mill(Game.board.getFiles(), btnRow,btnColumn);
                         if(checkMill){
-                            System.out.println("check milllll truee");
+                            Game.thereIsAMill = true;
                             highlightFilesToRemove();
                         }
                         if ( Game.currentTurn== GlobalConstants.BLACK) {
@@ -148,14 +148,6 @@ public class BoardPageController implements Initializable {
                             Game.currentTurn = GlobalConstants.BLACK;
                         }
                     }
-                    /*
-                     * ----------------CASO1--------------
-                     * Si el turno actual es ROJO y se forma un molino,
-                     * entonces se resaltará todas las fichas del jugador NEGRO
-                     *
-                     * Si el turno actual es NEGRO y se forma un molino,
-                     * entonces se resaltará todas las fichas del jugador ROJO
-                     * */
                 }
             }
         });
