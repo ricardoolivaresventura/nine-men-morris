@@ -45,16 +45,11 @@ public class Board {
     }
 
     public Boolean setFileInPosition(int row, int column){
-        //Boolean checkMill=false;
         if (row >= 0 && row < GlobalConstants.ROWS && column >= 0 && column < GlobalConstants.COLUMN) {
             files[row][column].setColor(Game.currentTurn);
-            //checkMill = Mill.mill(files,row,column);
             return true;
         }
         return false;
-        /*if(checkMill){
-
-        }*/
     }
 
 }

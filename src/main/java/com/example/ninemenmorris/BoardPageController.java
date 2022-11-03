@@ -139,6 +139,8 @@ public class BoardPageController implements Initializable {
                         Game.placedFilesQuantity = Game.placedFilesQuantity + 1;
                         checkMill = Mill.mill(Game.board.getFiles(), btnRow,btnColumn);
                         if(checkMill){
+                            MillPageController mill = new MillPageController();
+                            mill.toCall();
                             Game.thereIsAMill = true;
                             highlightFilesToRemove();
                         }

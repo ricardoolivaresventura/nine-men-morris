@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="millPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: A05000; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ninemenmorris.MillPageController">
+   <children>
+      <Button fx:id="btn" layoutX="74.0" layoutY="61.0" mnemonicParsing="false" onAction="#close" text="Ok" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="43.0" layoutY="19.0" text="Molino...!" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
